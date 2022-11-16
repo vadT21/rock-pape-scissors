@@ -1,0 +1,48 @@
+main{
+    width: 100%;
+    padding: 4rem 0 1.5rem 0;
+}
+.listContainer {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+    "p s"
+    "r  r";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+.paper, .rock, .scissors{
+    background-color: var(--white-back);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0.85rem solid;
+}
+.paper, .rock, .scissors img{
+    object-fit: contain;
+}
+.paper {
+    grid-area: p;
+    border-color: var(--paper-outline);
+}
+.rock {
+    grid-area: r;
+    border-color: var(--rock-outline);
+}
+.scissors {
+    grid-area: s;
+    border-color: var(--scissors-outline);
+}
+
+.selectContainer {
+    display: grid;
+    justify-items: center;
+    align-items: center;    
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
