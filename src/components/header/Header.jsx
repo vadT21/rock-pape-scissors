@@ -1,11 +1,12 @@
 import React from 'react';
 import './style.module.css';
 import logo from '../../images/logo.svg';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
 
   const title = 'ROCK, PAPER, SCISSORS';
-
+  const score = useSelector(state => state.score.score);
   return (
     <header>
       <h1>{title}</h1>
@@ -15,7 +16,9 @@ const Header = () => {
           SCORE
         </h2>
         <span>
-            12
+          {
+            score
+          }
         </span>
       </section>
     </header>
