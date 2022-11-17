@@ -10,7 +10,7 @@ main{
     justify-items: center;
 }
 
-.paper, .rock, .scissors{
+.paper, .rock, .scissors, .default{
     flex: 0 1 33.3333%;
     width: 120px;
     height: 120px;
@@ -20,37 +20,60 @@ main{
     align-items: center;
     border-radius: 50%;
     border: 0.85rem solid;
+    padding: 1rem;
+}
+.default{
+    border: 0;
+    background-color: rgba(0,0,0, 0.1);
 }
 .paper, .rock, .scissors img{
     object-fit: contain;
 }
 .paper {
-    grid-area: p;
     border-color: var(--paper-outline);
 }
 .rock {
-    grid-area: r;
     border-color: var(--rock-outline);
 }
 .scissors {
-    grid-area: s;
     border-color: var(--scissors-outline);
+}
+.listContainer > .rock{
+    grid-area: r;
+}
+.listContainer > .paper{
+    grid-area: p;
+}
+.listContainer > .scissors{
+    grid-area: s;
 }
 
 .selectContainer {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
 }
 
+.game{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    
+}
+p{
+    color: var(--white-color);
+    letter-spacing: 1px;
+}
 @media (min-width: 768px){
     main{
         width: 768px;
         margin: 7rem 0 2rem 0;
     }
-    .paper, .rock, .scissors{
+    .paper, .rock, .scissors, .default{
         width: 210px;
         height: 210px;
         border-width: 1.33rem;
