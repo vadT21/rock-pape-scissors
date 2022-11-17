@@ -5,11 +5,11 @@ import SelectItem from './SelectItem';
 
 const Main = () => {
 
-    const initState = {
-        select: false,
-        value: '',
-        src: '',
-    }
+  const initState = {
+    select: false,
+    value: '',
+    src: '',
+  };
   const [selectedItem, setSelectedItem] = useState(initState);
 
   const handlerSelectedItem = (item) => setSelectedItem({
@@ -21,16 +21,13 @@ const Main = () => {
 
   return (
     <main>
-    {
+      {
         selectedItem.select 
-        ?
-        <SelectItem />
-        :
-        <ListItems handlerSelectedItem={handlerSelectedItem}/>
-    }
-      
-      
-      <span>{selectedItem.value}</span>
+          ?
+          <SelectItem item = {selectedItem} resetGame = {setSelectedItem}/>
+          :
+          <ListItems handlerSelectedItem={handlerSelectedItem}/>
+      }
     </main>
   );
 };
