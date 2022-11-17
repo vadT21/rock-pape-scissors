@@ -1,17 +1,27 @@
 import React from 'react';
 import cl from './style.module.css';
 
-const Item = ({src, onClick, value}) => {
-    const item = {
-        src,
-        value,
+const Item = ({src, onClick, value='default'}) => {
+  const item = {
+    src,
+    value,
+  };
+
+  const handler = (value, func) => {
+    if (func){
+      func(value);
     }
+  };
+
   return (
     <div 
       className={cl[value]} 
-      onClick={() => onClick(item)}
+      onClick={() => handler(item, onClick)}
     >
-      <img  src={src} alt="rock"/>
+      {
+        src &&
+          <img  src={src} alt={value}/>
+      }
     </div>
   );
 };
