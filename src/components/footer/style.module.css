@@ -1,0 +1,22 @@
+footer{
+    padding-top: 1rem;  
+}
+
+button{
+    background-color: rgba(0,0,0,0);
+    color: var(--white-color);
+    border: 3px solid var(--outline);
+    border-radius: var(--border-rad);
+    width: 120px;
+    height: 40px;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+}
+
+@media (min-width: 768px) {
+    footer{
+        position: fixed;
+        top: 85%;
+        left: 85%;
+    }
+}

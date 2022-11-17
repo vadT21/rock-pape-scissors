@@ -3,16 +3,10 @@
 }
 
 .wrapper{
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
-  height: 100vh;
-
-}
-
-@media (min-width: 1366px){
-  .wrapper{
-    width: 1366px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
 }

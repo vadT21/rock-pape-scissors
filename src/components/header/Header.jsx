@@ -1,18 +1,16 @@
 import React from 'react';
-import cl from './style.module.css';
+import './style.module.css';
+import logo from '../../images/logo.svg';
 
 const Header = () => {
 
-  const title = `
-    ROCK  
-    PAPER 
-    SCISSORS
-  `;
+  const title = 'ROCK, PAPER, SCISSORS';
 
   return (
     <header>
       <h1>{title}</h1>
-      <section className={cl.score}>
+      <img src={logo} alt="logo" />
+      <section>
         <h2>
           SCORE
         </h2>

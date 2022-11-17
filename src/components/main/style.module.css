@@ -1,22 +1,20 @@
 main{
     width: 100%;
-    padding: 4rem 0 1.5rem 0;
+    margin: 4rem 0;
 }
-.listContainer {
+.listContainer{
     display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-areas:
-    "p s"
-    "r  r";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem;
+    grid-template-areas: 'p s' 'r r';
+    gap: 3rem;
+    justify-items: center;
 }
+
 .paper, .rock, .scissors{
-    background-color: var(--white-back);
+    flex: 0 1 33.3333%;
     width: 120px;
     height: 120px;
+    background-color: var(--white-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,9 +38,22 @@ main{
 }
 
 .selectContainer {
-    display: grid;
-    justify-items: center;
-    align-items: center;    
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px){
+    main{
+        width: 768px;
+        margin: 7rem 0 2rem 0;
+    }
+    .paper, .rock, .scissors{
+        width: 210px;
+        height: 210px;
+        border-width: 1.33rem;
+        padding: 2rem;
+    }
 }
