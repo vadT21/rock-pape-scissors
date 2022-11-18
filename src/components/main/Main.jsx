@@ -1,7 +1,7 @@
-import {useState} from 'react';
-import './main.module.css';
-import ListItems from './ListItems';
-import SelectItem from './SelectItem';
+import { useState } from 'react';
+import cl from './main.module.css';
+import ItemsSection from './ItemsSection';
+import CompareSection from './CompareSection';
 
 const Main = () => {
 
@@ -20,13 +20,13 @@ const Main = () => {
 
 
   return (
-    <main>
+    <main className={cl.main}>
       {
         selectedItem.select 
           ?
-          <SelectItem item = {selectedItem} resetGame = {setSelectedItem}/>
+          <CompareSection item = {selectedItem} resetGame = {setSelectedItem}/>
           :
-          <ListItems handlerSelectedItem={handlerSelectedItem}/>
+          <ItemsSection handlerSelectedItem={handlerSelectedItem}/>
       }
     </main>
   );
