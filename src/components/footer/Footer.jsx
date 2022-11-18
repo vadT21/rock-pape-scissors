@@ -7,8 +7,8 @@ const Footer = () => {
 
   const handlerVisibility = () => {
     console.log('change');
-    setVisible(true)
-  }
+    setVisible(true);
+  };
 
 
   return (
