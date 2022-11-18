@@ -1,0 +1,81 @@
+.footer{
+    position: fixed;
+    padding-top: 1rem;  
+    top: 85%;
+}
+
+.button{
+    background-color: rgba(0,0,0,0);
+    color: var(--white-color);
+    border: 3px solid var(--outline);
+    border-radius: var(--border-rad);
+    width: 120px;
+    height: 40px;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+}
+.modal {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    background: rgba(0,0,0,0.5);
+}
+.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.modalContent{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;    
+    background: var(--white-color);
+}
+.img{
+    object-fit: contain;
+
+}
+.h2{
+    font-size: 2rem;
+    color: var(--dark-text);
+}
+
+.closeButton{
+    border: none; 
+    outline: none;
+    background-color: inherit;
+}
+
+@media (min-width: 768px) {
+    .footer{
+        left: 85%;
+    }
+    .modalContent{
+        height: 444px;
+        width: 444px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;    
+        border-radius: var(--border-rad);
+    }
+    .img{
+        margin-top: -2rem;
+        order: 3;
+    }
+    .h2{
+        flex: 0 0 50%;
+        order: 1;
+    }
+    
+    .closeButton{
+        order: 2;
+    }
+}

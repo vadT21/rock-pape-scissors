@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import cl from './style.module.css';
+import cl from './main.module.css';
 import Item from './Item';
 import iconRock from '../../images/icon-rock.svg';
 import iconPaper from '../../images/icon-paper.svg';
@@ -72,8 +72,17 @@ const SelectItem = ({item, resetGame}) => {
         />
         <p>the house picked</p>
       </div> 
-      <div>{state}</div>  
-      <button onClick = {playAgain}>play again</button> 
+      <section className={cl.total}>
+        {
+          state === 'draw'
+            ?
+            <h2 className={cl.results}>{state}</h2>
+            :
+            <h2 className={cl.results}>you {state}</h2>
+        }
+        <button className={cl.playAgain} onClick = {playAgain}>play again</button> 
+      </section>
+      
     </div>
   );
 };
