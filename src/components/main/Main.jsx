@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import './style.module.css';
+import './main.module.css';
 import ListItems from './ListItems';
 import SelectItem from './SelectItem';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import cl from './style.module.css';
+import cl from './main.module.css';
 
 const Item = ({src, onClick, value='default'}) => {
   const item = {

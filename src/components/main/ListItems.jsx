@@ -3,7 +3,7 @@ import iconRock from '../../images/icon-rock.svg';
 import iconPaper from '../../images/icon-paper.svg';
 import iconScissors from '../../images/icon-scissors.svg';
 import Item from './Item';
-import cl from './style.module.css';
+import cl from './main.module.css';
 
 const ListItems = ({handlerSelectedItem}) => {
   return (
